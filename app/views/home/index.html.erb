@@ -1,10 +1,22 @@
-
-
-<% if current_user %>
-    <%= button_to 'Log out', destroy_user_session_path, method: :delete%>
+<% unless current_user %>
+    <div class='home-options'>
+        <h1>Wallet Aid</h1>
+        <div class='home-btns'>
+            <%= link_to 'Log in', new_user_session_path, class: 'button-primary' %>
+            <%= link_to 'Sign up', new_user_registration_path, class: 'btn' %>
+        </div>
+    </div>
 <% else %>
-    <p>You are not signed in</p>
-    <%= link_to 'Log in', new_user_session_path, class: 'link' %>
-    <br />
-    <%= link_to 'Sign up', new_user_registration_path %>
+    <div class=''>
+        <ul class='categories'>
+            <% @categories.each do |category|%>
+                <li>
+                    <%= image_tag category.icon, alt: category.icon %>
+                    <%= link_to category.name, category_expenses_path(category) %>
+                </li>
+            <% end %>
+        </ul>
+
+        <%= link_to "Add new category", new_category_path, class: 'button-primary new-cat' %>
+    </div>
 <% end %>
