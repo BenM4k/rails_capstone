@@ -25,7 +25,7 @@ RSpec.describe '/', type: :feature do
         sign_in @user
         visit root_url
         expect(page).to have_content(@category.name)
-        expect(page).to have_content(@category.total_amount)
+        expect(page).to have_content(@category.total_amount(@user))
     end
 
     it 'should redirect to category page' do
@@ -33,7 +33,7 @@ RSpec.describe '/', type: :feature do
         visit root_url
         click_link @category.name
         expect(page).to have_content(@category.name)
-        expect(page).to have_content(@category.total_amount)
+        expect(page).to have_content(@category.total_amount(@user))
         expect(page).to have_content(@expense1.name)
         expect(page).to have_content(@expense2.name)
         expect(page).to have_content(@expense3.name)

@@ -24,7 +24,7 @@ RSpec.describe '/categories', type: :feature do
     end
 
     it 'should have the total amount of this category' do
-      expect(page).to have_content(@category.total_amount)
+      expect(page).to have_content(@category.total_amount(@user))
     end
 
     it 'should have a button add new expense' do

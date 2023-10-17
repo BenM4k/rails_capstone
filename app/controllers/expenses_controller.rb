@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     @category = Category.find(params[:category_id])
-    @expenses = @category.expenses
+    @expenses = @category.expenses.where(author: current_user)
   end
 
   # GET /expenses/1 or /expenses/1.json

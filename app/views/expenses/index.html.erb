@@ -1,5 +1,5 @@
 <div class='expense'>
-  <h2><%= @category.name%> : $<%= @category.total_amount%> </h2>
+  <h2><%= @category.name%> : $<%= @category.total_amount(current_user)%> </h2>
 
   <ul id="expenses">
     <% @expenses.each do |expense| %>

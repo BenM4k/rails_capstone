@@ -13,7 +13,7 @@
                 <li>
                     <%= image_tag 'https://source.unsplash.com/random', alt: category.icon %>
                     <%= link_to category.name, category_expenses_path(category) %>
-                    <p>$<%= category.total_amount %></p>
+                    <p>$<%= category.total_amount(current_user) %></p>
                 </li>
             <% end %>
         </ul>
