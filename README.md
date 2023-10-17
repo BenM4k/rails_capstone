@@ -175,7 +175,7 @@ If you like this project, I encourage you to clone, fork, contribute, and consid
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the idea for this project.
+I would like to thank Microverse for the idea for this project as well as Gregoire Vella for the implementation os the design in use on this application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
