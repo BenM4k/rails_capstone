@@ -76,5 +76,5 @@ class ExpensesController < ApplicationController
   end
 end
 
-#hi copilot
-#give me a sum function
+# hi copilot
+# give me a sum function

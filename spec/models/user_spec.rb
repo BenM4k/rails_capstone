@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User, type: :model do
-  subject { User.new(name: 'Tester', email: "foo@bar.com", password: 'password') }
+  subject { User.new(name: 'Tester', email: 'foo@bar.com', password: 'password') }
 
   context 'When Testing new user validity' do
     it 'should be valid' do

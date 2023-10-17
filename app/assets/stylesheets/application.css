@@ -154,6 +154,12 @@ nav button {
   width: 20%;
 }
 
+.expense a {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .categories li a {
   flex: 1;
   color: #030303;
@@ -206,10 +212,4 @@ nav button {
   width: 100%;
   height: 80px;
   padding: 5px;
-}
-
-.expense a {
-  margin-top: auto;
-  padding: 20px 0;
-  text-align: center;
 }

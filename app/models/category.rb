@@ -6,6 +6,6 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   def total_amount(user)
-    self.expenses.where(author_id: user.id).eager_load(:category_expenses).sum("expenses.amount")
+    expenses.where(author_id: user.id).eager_load(:category_expenses).sum('expenses.amount')
   end
 end
