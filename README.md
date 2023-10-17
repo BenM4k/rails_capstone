@@ -72,6 +72,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://wallet-aid.onrender.com/)
+- [Video presentation](https://www.loom.com/share/2a7ee4426c6044149b3747594991dc42?sid=cb3b19aa-dc4e-4596-9694-8102beeca26e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
