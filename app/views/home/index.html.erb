@@ -7,12 +7,13 @@
         </div>
     </div>
 <% else %>
-    <div class=''>
+    <div class='home'>
         <ul class='categories'>
             <% @categories.each do |category|%>
                 <li>
-                    <%= image_tag category.icon, alt: category.icon %>
+                    <%= image_tag 'https://source.unsplash.com/random', alt: category.icon %>
                     <%= link_to category.name, category_expenses_path(category) %>
+                    <p>$<%= category.total_amount %></p>
                 </li>
             <% end %>
         </ul>
