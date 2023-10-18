@@ -71,8 +71,8 @@ Rails.application.configure do
     domain: 'wallet-aid.onrender.com',
     authentication: :plain,
     enable_starttls_auto: true,
-    user_name: 'ENV['GMAIL_USERNAME']',
-    password: 'ENV['GMAIL_PASSWORD']',
+    user_name: '<%= ENV['GMAIL_USERNAME'] %>',
+    password: '<%= ENV['GMAIL_PASSWORD'] %>',
   }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
