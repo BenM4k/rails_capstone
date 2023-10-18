@@ -1,11 +1,11 @@
 <% if current_user %>
   <nav>
     <div>
-      <% if request.path == root_path %>
+      <% if current_page?(root_path) %>
         <h2>Wallet Aid</h2>
-      <% elsif request.path == new_category_path %>
+      <% elsif current_page?(new_category_path) %>
         <li><%= link_to '&#8249;'.html_safe, root_path %></li>
-      <% elsif request.path == new_category_expense_path %>
+      <% elsif current_page?(new_category_expense_path) %>
         <% @category = Category.find(params[:category_id]) %>
         <li><%= link_to '&#8249;'.html_safe, category_expenses_path(@category) %></li>
       <% else %>
